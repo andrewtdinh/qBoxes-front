@@ -1,6 +1,6 @@
-angular.module('starter.controllers', ['starter.services'])
+var myApp = angular.module('starter.controllers', ['starter.services', 'firebase']);
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+myApp.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
   // Form data for the login modal
   $scope.loginData = {};
 
