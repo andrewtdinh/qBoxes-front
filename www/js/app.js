@@ -3,11 +3,11 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-var fb = new Firebase('https://myfb.firebaseio.com')
+// var fb = new Firebase('https://myfb.firebaseio.com')
 
 angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $window, firebaseUrl, $rootScope, $firebaseAuth) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -18,6 +18,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+    $rootScope.fbRoot = new $window.Firebase(firebaseUrl);
+    $rootScope.afAuth = $firebaseAuth($rootScope.fbRoot);
   });
 })
 
@@ -35,7 +37,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
     url: '/home',
     views: {
       'menuContent': {
-        templateUrl: 'templates/home.html'
+        templateUrl: 'templates/home.html',
+        controller: 'AppCtrl'
       }
     }
   });
