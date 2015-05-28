@@ -1,6 +1,8 @@
-var myApp = angular.module('starter.controllers', ['starter.services', 'starter.constants','firebase', 'ngCordova']);
+'use strict';
 
-myApp.controller('AppCtrl', function($scope, $ionicModal, $rootScope, $cordovaOauth, $ionicPopup) {
+angular.module('starter.controllers', ['starter.services', 'starter.constants','firebase', 'ngCordova', 'ngCordovaOauth'])
+
+.controller('AppCtrl', function($scope, $ionicModal, $rootScope, $cordovaOauth, $ionicPopup) {
   // Form data for the login modal
   $scope.loginData = {};
 
