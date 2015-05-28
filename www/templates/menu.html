@@ -18,11 +18,8 @@
     </ion-header-bar>
     <ion-content>
       <ion-list>
-        <ion-item menu-close ng-hide='activeUser'>
-          <button class="button button-block button-positive" ng-click="loginFb()">Login via Facebook</button>
-        </ion-item>
-        <ion-item menu-close ng-hide='activeUser'>
-          <button class="button button-block button-assertive" ng-click="loginGp()">Login via Google+</button>
+        <ion-item menu-close ng-click="login()">
+          Login
         </ion-item>
         <ion-item menu-close ng-show='activeUser'>
           <button class="button button-block button-assertive" ng-click="logout()">Logout</button>
