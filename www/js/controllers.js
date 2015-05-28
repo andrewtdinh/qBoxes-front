@@ -11,6 +11,15 @@ myApp.controller('AppCtrl', function($scope, $ionicModal, $timeout, $rootScope, 
     $scope.modal = modal;
   });
 
+  var showAlert = function(titleStr, response){
+    $ionicPopup.alert({
+      title: titleStr,
+      content: response
+    }).then(function(res) {
+      console.log('Test Alert Box');
+    });
+  }
+
   // Triggered in the login modal to close it
   $scope.closeLogin = function() {
     $scope.modal.hide();
