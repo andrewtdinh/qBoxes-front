@@ -1,6 +1,6 @@
-var myApp = angular.module('starter.controllers', ['starter.services', 'starter.constants','firebase']);
+var myApp = angular.module('starter.controllers', ['starter.services', 'starter.constants','firebase', 'ngCordova']);
 
-myApp.controller('AppCtrl', function($scope, $ionicModal, $timeout, $rootScope) {
+myApp.controller('AppCtrl', function($scope, $ionicModal, $timeout, $rootScope, $cordovaOauth) {
   // Form data for the login modal
   $scope.loginData = {};
 
