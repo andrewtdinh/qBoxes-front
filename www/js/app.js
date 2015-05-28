@@ -1,9 +1,10 @@
-// Ionic Starter App
-
+'use strict';
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
+var fb = new Firebase('https://myfb.firebaseio.com')
+
 angular.module('starter', ['ionic', 'starter.controllers', 'firebase'])
 
 .run(function($ionicPlatform) {
