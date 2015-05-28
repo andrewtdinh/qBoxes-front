@@ -31,25 +31,14 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     controller: 'AppCtrl'
   })
 
-  .state('app.sessions', {
-    url: "/sessions",
+  .state('app.home', {
+    url: '/home',
     views: {
       'menuContent': {
-        templateUrl: 'templates/sessions.html',
-        controller: 'SessionsCtrl'
-      }
-    }
-  })
-
-  .state('app.session', {
-    url: '/sessions/:sessionId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/session.html',
-        controller: 'SessionCtrl'
+        templateUrl: 'templates/home.html'
       }
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/sessions');
+  $urlRouterProvider.otherwise('/app/home');
 });
